@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>AEZEN 일반인 EZEN 개발자</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <link rel="stylesheet" href="../css/info.css">
+  <script src="../js/home.js"></script>
+  <script src="../js/info.js"></script>
+</head>
+<body>
+  <!---------------- 헤더영역 ---------------------->
+  <!-- 로고영역 + 로그인박스 + 아이콘 -->
+  <header>
+    <!-- 로고영역 -->
+    <div class="logo-area">
+      <div class="logo">
+        <a href="../main/home.html">
+        <img src="../img/ezen_logo.jpg" style="width: 80px; height: 80px;">
+        </a>
+      </div>
+      <div class="site-title">
+        <a href="../main/home.html" class="site-link">
+          <span class="part1">AEZEN&nbsp;일반인</span> &nbsp;&nbsp;
+          <span class="part2">EZEN&nbsp;개발자</span>
+        </a>
+      </div>
+    </div>
+    <!-- 로그인박스 (초기 보임) -->
+    <div class="login-box">
+      <input type="text" id="loginId" placeholder="ID 입력">
+      <input type="password" id="loginPw" placeholder="PW 입력">
+      <div class="login-options">
+        <label><input type="checkbox" id="rememberMe"> ID 기억하기</label>
+        <a href="../account/join_find.html">ID/PW 찾기</a>
+        <a href="../account/join_agree.html">회원가입</a>
+      </div>
+      <button id="loginBtn">로그인</button>
+    </div>
+    <!-- 아이콘 (초기 숨김) -->
+    <div class="icons" style="display:none;">
+      <button id="btnMyPage" data-tooltip="마이페이지">👨</button>
+      <button id="btnNotify" data-tooltip="알림">🔔</button>
+      <button id="btnMsg" data-tooltip="메세지">📬</button>
+      <button id="btnTrophy" data-tooltip="포인트">🏆</button>
+      <button id="btnLogout" data-tooltip="로그아웃">🔑</button>
+    </div>
+  </header>
+
+
+  <!---------------- 메인영역 ---------------------->
+  <main>
+    <!-- 컨테이너 (게시글 래퍼 + 사이드바) -->
+    <!-- 수정 시, 게시글 래퍼 전체수정 or 게시글 수정 -->
+    <div class="container">
+
+      <!-- 게시글 래퍼( 공지/정렬버튼 + 게시글 ) -->
+      <div class="posts-wrapper">
+
+        <!-- 공지/정렬버튼 -->
+        <div class="notice-bar">
+        <div class="notice-row">
+
+          <div class="notice-text">
+          <strong>📢 공지사항&nbsp;&nbsp;: </strong>&nbsp;&nbsp;
+          <a href="../main/info.html" class="notice-note" style="color: rgb(219, 219, 93);">이용규칙 안내 .......</a>
+          </div>
+
+          <div class="notice-buttons">
+          <div class="top-buttons">
+            <button>최신순</button>
+            <button>조회순</button>
+            <button>검색순</button>
+          </div>
+          <div class="feed-buttons">
+            <button>전체</button>
+          </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- 게시글 -->
+        <div class="posts">
+        <!------------------ 공지사항 패널  ---------------------->
+         <div id="notice-panel" class="info-panel">
+          <div class="post">
+
+            <div class="post-header">
+              <span class="kind">[공지사항]</span>
+              <span class="title">사이트 이용규칙 안내 ....</span>
+              <span class="nick">작성자: 관리자
+              </span>
+              <span class="hit">조회수: 10</span>
+              <span class="wdate">작성일: 2025.09.25 09:23</span>
+            </div>
+
+            <div class="post-body">
+              <a href="../img/ezen_logo.jpg" class="upload">첨부파일 없음</a>
+              <div class="bnote">
+                <br>
+                📢 AEZEN 사이트에 오신 것을 환영합니다.<br>
+                - 사이트 이용 규칙을 준수해 주세요.<br>
+                - 건전한 커뮤니티 문화를 함께 만들어가요.<br>
+                - 업데이트 및 이벤트 소식은 이곳에서 확인하실 수 있습니다.
+              </div>           
+              <!-- 이미지 미리보기 -->
+              <div class="post-images" style="display: none;">
+                <img src="../img/img1.jpg" alt="첨부 이미지">
+                <img src="../img/img2.jpg" alt="첨부 이미지">
+              </div>
+              <br>
+              <div class="tag">
+                <a href="/tags/공지">#공지</a>
+                <a href="/tags/이벤트">#이벤트</a>
+                <a href="/tags/업데이트">#업데이트</a>
+              </div>
+            </div>
+
+            <div class="post-footer">
+              <span class="comment">댓글 24개</span>
+            <div class="post-actions">
+              <a href="../main/write.html" class="edit-btn">수정</a>
+              <span class="delete-btn" data-type="post">삭제</span>
+            </div>
+            <a href="#" class="more">더보기</a>
+          </div>
+
+          <!-- 댓글 영역 -->
+          <br>
+          <div class="comments">
+            <div class="comment-item" data-id="1">
+              <span class="c-text">첫 번째 댓글 내용입니다.</span>
+              <div class="comment-actions">
+                <span class="edit-btn">수정</span>
+                <span class="delete-btn" data-type="comment">삭제</span>
+              </div>
+            </div>
+            <div class="comment-item" data-id="2">
+              <span class="c-text">두 번째 댓글 내용입니다.</span>
+              <div class="comment-actions">
+                <span class="edit-btn">수정</span>
+                <span class="delete-btn" data-type="comment">삭제</span>
+              </div>
+            </div>
+            <div class="comment-item" data-id="3">
+              <span class="c-text">세 번째 댓글 내용입니다.</span>
+              <div class="comment-actions">
+                <span class="edit-btn">수정</span>
+                <span class="delete-btn" data-type="comment">삭제</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 댓글 입력창 -->
+          <div class="comment-form" style="display: none;">
+            <textarea placeholder="댓글을 입력하세요..."></textarea>
+            <button type="button" class="submit-comment">작성</button>
+          </div>
+          </div>
+        </div>
+                      
+        
+        
+        
+        <!-------------------이용약관 패널------------------------------->
+        <div id="terms-panel" class="info-panel hidden">
+        <div class="post">
+
+            <div class="post-header">
+              <span class="kind">[이용약관]</span>
+              <span class="title">사이트 이용약관 ....</span>
+              <span class="nick">작성자: 관리자
+              </span>
+              <span class="hit">조회수: 10</span>
+              <span class="wdate">작성일: 2025.09.25 09:23</span>
+            </div>
+
+            <div class="post-body">
+              <a href="../img/ezen_logo.jpg" class="upload">첨부파일 없음</a>
+              <div class="bnote">
+                <br>
+                제1조 (목적) 본 약관은 AEZEN이 제공하는 서비스 이용과 관련하여 권리·의무 및 책임사항을 규정합니다.
+                제2조 (정의) "회원"은 약관에 동의하고 가입한 자를 말합니다.
+                제3조 (약관의 효력 및 변경) 약관은 게시 시 효력을 가지며, 법령 범위 내에서 변경될 수 있습니다.
+                제4조 (회원가입 및 관리) 회원은 정확한 정보를 제공해야 하며, 도용 시 법              제4조 (회원가입 및 관리) 회원은 정확한 정보를 제공해야 하며, 도용 시 법적 책임이 따릅니다.
+                제5조 (서비스 제공 및 변경) 서비스는 운영상 필요에 따라 변경될 수 있으며 사전 고지됩니다.
+                제6조 (회원의 의무) 회원은 법령·약관·공지사항을 준수해야 합니다.
+                제7조 (게시물 관리) 회원 게시물은 관련 법령에 따라 삭제/수정될 수 있습니다.
+                제8조 (이용 제한) 약관 위반 시 이용 제한 또는 회원 자격 박탈이 가능할 수 있습니다.
+                제9조 (면책) 불가항력 시 회사는 책임을 지지 않습니다.
+                제10조 (준거법) 대한민국 법을 따르며, 관할은 회사 본사 소재지 법원입니다.
+              </div>           
+            </div>
+
+          <div class="post-footer">
+            <span class="comment"></span>
+            <div class="post-actions">
+              <a href="../main/write.html" class="edit-btn">수정</a>
+              <span class="delete-btn" data-type="post">삭제</span>
+            </div>
+            <a href="#" class="more">더보기</a>
+          </div>
+        </div>
+        </div>
+
+        <!-----------------------개인정보처리방침 패널--------------------------------->
+        <div id="privacy-panel" class="info-panel hidden">
+        <div class="post">
+
+            <div class="post-header">
+              <span class="kind">[개인정보처리방침]</span>
+              <span class="title">사이트 개인정보처리방침 ....</span>
+              <span class="nick">작성자: 관리자
+              </span>
+              <span class="hit">조회수: 10</span>
+              <span class="wdate">작성일: 2025.09.25 09:23</span>
+            </div>
+
+            <div class="post-body">
+              <a href="../img/ezen_logo.jpg" class="upload">첨부파일 없음</a>
+              <div class="bnote">
+                <br>
+                    AEZEN은 회원님의 개인정보를 소중히 여기며, 관련 법령을 준수합니다.
+                
+                    1. 수집 항목: 아이디, 비밀번호, 이메일, 접속 로그 등
+                    2. 이용 목적: 회원 관리, 서비스 제공, 공지 전달 등
+                    3. 보관/파기: 탈퇴 시 즉시 파기하며, 법령에 따라 일정 기간 보관 가능
+                    4. 제3자 제공: 원칙적으로 제공하지 않으며, 법령 요청 시에만 제공
+                    5. 보호 조치: 암호화 저장, 접근 권한 제한, 보안 프로그램 적용
+                    
+                    자세한 내용은 개인정보 처리방침 전문을 참고하십시오.
+              </div>           
+            </div>
+
+          <div class="post-footer">
+            <span class="comment"></span>
+            <div class="post-actions">
+              <a href="../main/write.html" class="edit-btn">수정</a>
+              <span class="delete-btn" data-type="post">삭제</span>
+            </div>
+            <a href="#" class="more">더보기</a>
+          </div>
+        </div>
+        </div>
+
+
+
+        </div> 
+
+        <!-- 글쓰기 버튼 -->
+        <button id="writeBtn" class="write-btn">✏</button>
+
+
+
+      </div> <!-- 게시글 래퍼 끝 -->
+        
+      <!---- 사이드바 ---->
+        <div class="sidebar">
+        <div class="ad-top">
+          <a href="https://www.eduwill.net/sites/home" target="_blank">
+            <img src="../img/adbaner.jpg" alt="광고 이미지">
+          </a>
+        </div>
+
+        <!-- 탭 버튼 (실시간채팅 / 공지사항) -->
+        <div class="sidebar-tabs" role="tablist">
+        <button class="tab-button" data-target="panel-chat" role="tab" aria-selected="false">실시간채팅</button>
+        <button class="tab-button" data-target="panel-info" role="tab" aria-selected="true">공지사항</button>
+        </div>
+
+        <!-- 탭 패널: 실시간채팅 -->
+        <div class="tab-panel" id="panel-chat" role="tabpanel">
+            <div style="text-align: center;">현재 접속자 수</div>
+            <div style="text-align: center;">100,543명</div>
+            <!-- 채팅로그 -->
+            <div class="messages">
+            안녕하세요... (닉네임) 🔔
+            <div style="margin-top:6px;color:#666;font-size:12px;">(예시 채팅이 표시됩니다.)</div>
+            </div>
+            <!-- 입력창 (하단 고정) -->
+            <div class="chat-input">
+            <input type="text" placeholder="내용을 입력하세요">
+            <button>전송</button>
+            </div>
+        </div>
+
+        <!-- 탭 패널: 공지사항 -->
+        <div class="tab-panel" id="panel-info" role="tabpanel">
+        <ul class="info-list" style="flex:1; overflow:auto;">
+            <li><a href="#" data-content="notice">공지사항</a></li>
+            <li><a href="#" data-content="terms">이용약관</a></li>
+            <li><a href="#" data-content="privacy">개인정보처리방침</a></li>
+        </ul>
+        </div>
+        </div>
+    </div>
+  </main>
+
+
+  <!---------------------- 푸터 -------------------------->
+  <footer>
+    <span>&copy; 2025 AEZEN. All Rights Reserved.</span>
+    <a href="../main/info.html?tab=terms">이용약관</a>
+    <a href="../main/info.html?tab=privacy">개인정보 처리방침</a>
+    <a href="../main/write.html?category=qna&target=admin">문의/신고</a>
+  </footer>
+</body>
+</html>

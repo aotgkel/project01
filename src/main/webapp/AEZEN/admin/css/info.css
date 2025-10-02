@@ -1,0 +1,102 @@
+/* ===========================
+ * info.html 전용 스타일 (info.css)
+ * =========================== */
+
+/* 숨김 클래스 보장 (home.css에 없을 경우 대비) */
+.hidden { display: none !important; }
+
+/* 공지사항 리스트 (panel-info 안) */
+.sidebar #panel-info .info-list li {
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  background: #fff;
+  transition: background 0.2s;
+}
+
+/* anchor에 active 있을 때 (JS가 a에 active를 붙여줄 수 있도록) */
+.sidebar #panel-info .info-list li a.active {
+  background: #f0f0f0;
+  font-weight: 600;
+  color: #000;
+  border-radius: 6px;
+  display: block;
+}
+
+/* 기본 링크 */
+.sidebar #panel-info .info-list li a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* hover */
+.sidebar #panel-info .info-list li a:hover {
+  background: #f0f0f0;
+  color: #000;
+}
+
+/* info-list 공통 */
+.info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.info-list li {
+  margin: 6px 8px;
+  border-radius: 6px;
+  transition: background .15s, color .15s;
+}
+.info-list li a {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* -- 반드시 필요한 선택 스타일 (추가) -- */
+.info-list li.selected {
+  background: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  font-weight: 600;
+}
+.info-list li.selected a {
+  color: #000;
+  background: #f0f0f0;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+/* 포용성: a.active 도 덮어줌 (안전장치) */
+.info-list li a.active {
+  background: #f0f0f0;
+  font-weight: 600;
+  color: #000;
+  border-radius: 6px;
+}
+
+/* info-panel 내부 footer 정렬 유지 */
+.info-panel .post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-panel .post-footer .comment:empty::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  visibility: hidden;
+}
+
+/* 실시간 탭 메시지 영역 최소 높이 보장 (home.css 구조 참고) */
+.sidebar #panel-chat .messages {
+  flex: 1;
+  min-height: 180px; /* 필요시 200px으로 올리세요 */
+  overflow-y: auto;
+}
+
+/* (주의) 여기서는 .tab-panel {display: none} 같은 전역 덮어쓰기는 하지 않습니다.
+   .hidden 클래스로 제어하도록 둡니다. */

@@ -1,0 +1,169 @@
+.write-page .content-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;        /* 사이드바와 같은 높이 */
+  /* ✅ 여기에도 overflow 제거 */
+}
+
+/* 게시글 작성 영역 */
+.write-page .posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* ❌ 여기에도 overflow 주지 않기 */
+}
+
+.write-page .form-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 16px 0; /* 아래쪽 여백 */
+  color: #333;
+}
+
+/* 글쓰기 폼 */
+.write-page .write-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+
+  /* ✅ 강제로 늘어나지 않게 */
+  height: auto;
+}
+
+.write-page .write-form textarea {
+  width: 100%;
+  min-height: 400px;  /* ✅ 기본 크기 넉넉히 */
+  resize: vertical;   /* 사용자가 크기 조절 가능 */
+  overflow-y: auto;   /* 글이 길면 textarea 내부에서만 스크롤 */
+}
+
+.write-page .write-form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.write-page .write-form input[type="text"],
+.write-page .write-form textarea {
+  width: 100%;             /* 부모 안에서만 100% */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;  /* ✅ 넘침 방지 */
+}
+
+.write-page .write-form select {
+  width: auto;             /* 글자 크기에 맞게 */
+  min-width: 120px;        /* 너무 작아지지 않도록 최소폭 */
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.write-page .write-form textarea {
+  height: 200px;
+  resize: vertical;
+}
+
+/* 파일업로드 + 버튼행을 같은 줄에 배치 */
+.write-page .form-bottom {
+  display: flex;
+  justify-content: space-between; /* 좌-우 배치 */
+  align-items: center;
+  gap: 20px;
+}
+
+.write-page .file-upload-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.write-page .file-upload-wrapper input[type="file"] {
+  display: none;
+}
+
+.write-page .file-upload-label {
+  padding: 8px 14px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.write-page .file-upload-label:hover {
+  background: #0056b3;
+}
+
+.write-page .file-name {
+  font-size: 14px;
+  color: #555;
+}
+
+.write-page .form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.write-page .form-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.write-page .btn-submit {
+  background: #28a745;
+  color: #fff;
+}
+
+.write-page .btn-submit:hover {
+  background: #218838;
+}
+
+.write-page .btn-cancel {
+  background: #6c757d;
+  color: #fff;
+}
+
+.write-page .btn-cancel:hover {
+  background: #5a6268;
+}
+
+.write-page .category-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.write-page .extra-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.write-page .extra-category select,
+.write-page .extra-category input[type="number"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  width: auto;
+  min-width: 120px;
+  box-sizing: border-box;
+}

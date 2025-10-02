@@ -1,0 +1,59 @@
+/* join_info.css → body 안의 .post 영역에만 적용 */
+.post label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+}
+
+.post .input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.post input[type="text"],
+.post input[type="password"],
+.post input[type="email"],
+.post input[type="date"] {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.post .message {
+  font-size: 0.75em;
+  color: #d9534f;
+  margin-top: 5px;
+  margin-bottom: 10px; /* 아래 라벨과 간격 확보 */
+  min-height: 18px;     /* 메시지가 없을 때도 공간 확보 */
+}
+
+.post .captcha {
+  margin-top: 20px;
+}
+
+.post .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.post .button-group button {
+  flex: 1;
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.post button {
+  padding: 10px 15px;
+  background-color: #90979c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post button:hover {
+  background-color: #676a6d;
+}

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>AEZEN 일반인 EZEN 개발자</title>
+  <link rel="stylesheet" href="../css/home.css">
+  <script src="../js/home.js"></script>
+  
+</head>
+<body>
+  <!---------------- 헤더영역 ---------------------->
+  <!-- 로고영역 + 로그인박스 + 아이콘 -->
+  <header>
+    <!-- 로고영역 -->
+    <div class="logo-area">
+      <div class="logo">
+        <a href="../main/home.html">
+        <img src="../img/ezen_logo.jpg" style="width: 80px; height: 80px;">
+        </a>
+      </div>
+      <div class="site-title">
+        <a href="../main/home.html" class="site-link">
+          <span class="part1">AEZEN&nbsp;일반인</span> &nbsp;&nbsp;
+          <span class="part2">EZEN&nbsp;개발자</span>
+        </a>
+      </div>
+    </div>
+    <!-- 로그인박스 (초기 보임) -->
+    <div class="login-box">
+      <input type="text" id="loginId" placeholder="ID 입력">
+      <input type="password" id="loginPw" placeholder="PW 입력">
+      <div class="login-options">
+        <label><input type="checkbox" id="rememberMe"> ID 기억하기</label>
+        <a href="../account/join_find.html">ID/PW 찾기</a>
+        <a href="../account/join_agree.html">회원가입</a>
+      </div>
+      <button id="loginBtn">로그인</button>
+    </div>
+    <!-- 아이콘 (초기 숨김) -->
+    <div class="icons" style="display:none;">
+      <button id="btnMyPage" data-tooltip="마이페이지">👨</button>
+      <button id="btnNotify" data-tooltip="알림">🔔</button>
+      <button id="btnMsg" data-tooltip="메세지">📬</button>
+      <button id="btnTrophy" data-tooltip="포인트">🏆</button>
+      <button id="btnLogout" data-tooltip="로그아웃">🔑</button>
+    </div>
+  </header>
+
+
+  <!---------------- 메인영역 ---------------------->
+  <main>
+    <!-- 컨테이너 (게시글 래퍼 + 사이드바) -->
+    <!-- 수정 시, 게시글 래퍼 전체수정 or 게시글 수정 -->
+    <div class="container">
+
+      <!-- 게시글 래퍼( 공지/정렬버튼 + 게시글 ) -->
+      <div class="posts-wrapper">
+
+        <!-- 공지/정렬버튼 -->
+        <div class="notice-bar">
+        <div class="notice-row">
+
+          <div class="notice-text">
+          <strong>📢 공지사항&nbsp;&nbsp;: </strong>&nbsp;&nbsp;
+          <a href="../main/info.html" class="notice-note" style="color: rgb(219, 219, 93);">이용규칙 안내 .......</a>
+          </div>
+
+          <div class="notice-buttons">
+          <div class="top-buttons">
+            <button>최신순</button>
+            <button>조회순</button>
+            <button>추천순</button>
+            <button>팔로우순</button>
+            <button>검색순</button>
+          </div>
+          <div class="feed-buttons">
+            <button>전체</button>
+            <button>자유</button>
+            <button>코딩테스트</button>
+            <button>Q&A</button>
+          </div>
+          </div>
+        </div>
+        </div>
+
+        <!-- 게시글 -->
+        <div class="posts">
+
+          <!-- 게시글 예시 1 -->
+          <div class="post">
+
+            <div class="post-header">
+              <span class="kind">[자유]</span>
+              <span class="title">무난하게 3부 상대로 대승! 승리의 프랭크호 ....</span>
+              <span class="nick dropdown">작성자: 고길동
+                <ul class="dropdown-menu">
+                  <li><a href="#">프로필 보기</a></li>
+                  <li><a href="#">팔로우 하기</a></li>
+                  <li><a href="#">메세지 보내기</a></li>
+                  <li><a href="#">차단하기</a></li>
+                </ul>
+              </span>
+              <span class="hit">조회수: 10</span>
+              <span class="wdate">작성일: 2025.09.25 09:23</span>
+              <span class="report" data-post-id="1">🚨 신고하기</span>
+            </div>
+
+            <div class="post-body">
+              <a href="../img/ezen_logo.jpg" class="upload">첨부파일 없음</a>
+              <div class="bnote">긴글 예시 / 긴글예시 / 긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /
+                (이런 식으로 긴 글이 들어간다고 가정)
+              </div>           
+              <!-- 이미지 미리보기 -->
+              <div class="post-images" style="display: none;">
+                <img src="../img/img1.jpg" alt="첨부 이미지">
+                <img src="../img/img2.jpg" alt="첨부 이미지">
+              </div>
+              <br>
+              <div class="tag">
+                <a href="/tags/공지">#공지</a>
+                <a href="/tags/이벤트">#이벤트</a>
+                <a href="/tags/업데이트">#업데이트</a>
+              </div>
+            </div>
+
+            <div class="post-footer">
+              <span class="comment">댓글 24개</span>
+              <div class="votes">
+              <span class="post-up">추천 24 👍</span>
+              <span class="post-down">비추천 2 👎</span>
+             </div>
+            <div class="post-actions">
+              <a href="../main/write.html" class="edit-btn">수정</a>
+              <span class="delete-btn" data-type="post">삭제</span>
+            </div>
+            <a href="#" class="more">더보기</a>
+          </div>
+
+          <!-- 댓글 영역 -->
+          <br>
+          <div class="comments">
+            <div class="comment-item" data-id="1">
+              <span class="c-text">첫 번째 댓글 내용입니다.</span>
+              <div class="c-votes">
+                <span class="comment-up">👍</span>
+                <span class="comment-down">👎</span>
+              </div>
+              <div class="comment-actions">
+                <span class="edit-btn">수정</span>
+                <span class="delete-btn" data-type="comment">삭제</span>
+              </div>
+            </div>
+            <div class="comment-item" data-id="2">
+              <span class="c-text">두 번째 댓글 내용입니다.</span>
+              <div class="c-votes">
+                <span class="comment-up">👍</span>
+                <span class="comment-down">👎</span>
+              </div>
+              <div class="comment-actions">
+                <span class="edit-btn">수정</span>
+                <span class="delete-btn" data-type="comment">삭제</span>
+              </div>
+            </div>
+            <div class="comment-item" data-id="3">
+              <span class="c-text">세 번째 댓글 내용입니다.</span>
+              <div class="c-votes">
+                <span class="comment-up">👍</span>
+                <span class="comment-down">👎</span>
+              </div>
+              <div class="comment-actions">
+                <span class="edit-btn">수정</span>
+                <span class="delete-btn" data-type="comment">삭제</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 댓글 입력창 -->
+          <div class="comment-form" style="display: none;">
+            <textarea placeholder="댓글을 입력하세요..."></textarea>
+            <button type="button" class="submit-comment">작성</button>
+          </div>
+          </div>
+          
+
+
+
+
+
+          <!-- 게시글 예시 2 -->
+          <div class="post">
+
+            <div class="post-header">
+              <span class="kind">[코딩테스트]</span>
+              <span class="title">if문을 이용한 5가지 문제 풀어보세요 ....</span>
+              <span class="nick dropdown">작성자: 고길동
+                <ul class="dropdown-menu">
+                  <li><a href="#">프로필 보기</a></li>
+                  <li><a href="#">팔로우 하기</a></li>
+                  <li><a href="#">메세지 보내기</a></li>
+                  <li><a href="#">차단하기</a></li>
+                </ul>
+              </span>
+              <span class="hit">조회수: 10</span>
+              <span class="wdate">작성일: 2025.09.25 09:23</span>
+              <span class="report" data-post-id="2">🚨 신고하기</span>
+            </div>
+
+            <div class="post-body">
+              <a href="../img/ezen_logo.jpg" class="upload">첨부파일 없음</a>
+              <div class="bnote">긴글 예시 / 긴글예시 / 긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /
+              (이런 식으로 긴 글이 들어간다고 가정)</div>
+              <br>
+              <div class="tag">
+                <a href="/tags/공지">#공지</a>
+                <a href="/tags/이벤트">#이벤트</a>
+                <a href="/tags/업데이트">#업데이트</a>
+              </div>
+            </div>
+
+              <!-- 답안 토글 -->
+              <div class="answer-toggle">
+                <button class="answer-btn">답안 작성 / 모아보기</button>
+              </div>
+              <!-- 답안 영역 -->
+              <div class="answers">
+                <div class="answer-list">
+                  <div class="answer-item" data-id="1">
+                    <div class="a-text">이 문제는 이렇게 풀 수 있습니다...</div>
+                    <div class="a-footer">
+                      <span class="author">by 익명</span>
+                      <div class="answer-actions">
+                        <span class="edit-btn">수정</span>
+                        <span class="delete-btn" data-type="answer">삭제</span>
+                      </div>
+                      <button class="a-choice">채택</button>
+                    </div>
+                  </div>
+                  <div class="answer-item" data-id="2">
+                    <div class="a-text">이 문제는 이렇게 풀 수 있습니다...</div>
+                    <div class="a-footer">
+                      <span class="author">by 익명</span>
+                      <div class="answer-actions">
+                        <span class="edit-btn">수정</span>
+                        <span class="delete-btn" data-type="answer">삭제</span>
+                      </div>
+                      <button class="a-choice">채택</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- 답안 입력 창-->
+                <form class="answer-form">
+                  <textarea placeholder="답안을 작성해보세요..." required></textarea>
+                  <button type="submit">등록</button>
+                </form>
+              </div>
+
+              <div class="post-footer">
+              <span class="comment">댓글 24개</span>
+              <div class="votes">
+                <span class="post-up">추천 24 👍</span>
+                <span class="post-down">비추천 2 👎</span>
+              </div>
+              <div class="post-actions">
+                <a href="../main/write.html" class="edit-btn">수정</a>
+                <span class="delete-btn" data-type="post">삭제</span>
+              </div>
+              <a href="#" class="more">더보기</a>
+              </div>
+
+              <!-- 댓글 영역 -->
+              <br>
+              <div class="comments">
+                <div class="comment-item" data-id="1">
+                  <span class="c-text">첫 번째 댓글 내용입니다.</span>
+                  <div class="c-votes">
+                    <span class="comment-up">👍</span>
+                    <span class="comment-down">👎</span>
+                  </div>
+                <div class="comment-actions">
+                  <span class="edit-btn">수정</span>
+                  <span class="delete-btn" data-type="comment">삭제</span>
+                </div>
+                </div>
+                <div class="comment-item" data-id="2">
+                  <span class="c-text">두 번째 댓글 내용입니다.</span>
+                  <div class="c-votes">
+                    <span class="comment-up">👍</span>
+                    <span class="comment-down">👎</span>
+                  </div>
+                <div class="comment-actions">
+                  <span class="edit-btn">수정</span>
+                  <span class="delete-btn" data-type="comment">삭제</span>
+                </div>
+                </div>
+                <div class="comment-item" data-id="3">
+                  <span class="c-text">세 번째 댓글 내용입니다.</span>
+                  <div class="c-votes">
+                    <span class="comment-up">👍</span>
+                    <span class="comment-down">👎</span>
+                  </div>
+                <div class="comment-actions">
+                  <span class="edit-btn">수정</span>
+                  <span class="delete-btn" data-type="comment">삭제</span>
+                </div>
+                </div>
+              </div>
+              <!-- 댓글 입력창 -->
+              <div class="comment-form" style="display: none;">
+                <textarea placeholder="댓글을 입력하세요..."></textarea>
+                <button type="button" class="submit-comment">작성</button>
+              </div>
+          </div>
+
+
+
+
+
+
+
+
+
+          <!-- 게시글 예시 3 -->
+          <div class="post">
+
+            <div class="post-header">
+              <span class="kind">[Q&A]</span>
+              <span class="title">급해요 이기능 어떻게 구현하나요 ㅠㅠ</span>
+              <span class="nick dropdown">
+                작성자: 신입이
+                <ul class="dropdown-menu">
+                  <li><a href="#">프로필 보기</a></li>
+                  <li><a href="#">팔로우 하기</a></li>
+                  <li><a href="#">메세지 보내기</a></li>
+                  <li><a href="#">차단하기</a></li>
+                </ul>
+              </span>
+              <span class="hit">조회수: 10</span>
+              <span class="wdate">작성일: 2025.09.25 09:23</span>
+              <span class="report" data-post-id="2">🚨 신고하기</span>
+            </div>
+
+            <div class="post-body">
+              <a href="../img/ezen_logo.jpg" class="upload">첨부파일 없음</a>
+              <div class="bnote">긴글 예시 / 긴글예시 / 긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /긴글 예시 / 긴글예시 /
+              (이런 식으로 긴 글이 들어간다고 가정)</div>
+              <br>
+              <div class="tag">
+                <a href="/tags/공지">#공지</a>
+                <a href="/tags/이벤트">#이벤트</a>
+                <a href="/tags/업데이트">#업데이트</a>
+              </div>
+            </div>
+
+            <!-- 답안 버튼 -->
+            <div class="answer-toggle">
+              <button class="answer-btn">답변 작성 / 모아보기</button>
+            </div>
+            <!-- 답안 영역 -->
+            <div class="answers">
+              <div class="answer-list">
+                <div class="answer-item" data-id="1">
+                  <div class="a-text">그 기능은 이렇게 저렇게...</div>
+                  <div class="a-footer">
+                    <span class="author">by 개고수</span>
+                      <div class="answer-actions">
+                        <span class="edit-btn">수정</span>
+                        <span class="delete-btn" data-type="answer">삭제</span>
+                      </div>
+                    <button class="a-choice">채택</button>
+                  </div>
+                </div>
+                <div class="answer-item" data-id="2">
+                  <div class="a-text">퇴사가 답...</div>
+                  <div class="a-footer">
+                    <span class="author">by 번아웃러</span>
+                      <div class="answer-actions">
+                        <span class="edit-btn">수정</span>
+                        <span class="delete-btn" data-type="answer">삭제</span>
+                      </div>
+                    <button class="a-choice">채택</button>
+                  </div>
+                </div>
+              </div>
+              <!-- 답안 작성 폼 -->
+              <form class="answer-form">
+                <textarea placeholder="답변을 작성해보세요..." required></textarea>
+                <button type="submit">등록</button>
+              </form>
+            </div>
+
+           <div class="post-footer">
+            <span class="comment">댓글 24개</span>
+            <div class="votes">
+            <span class="post-up">추천 24 👍</span>
+            <span class="post-down">비추천 2 👎</span>
+            </div>
+            <div class="post-actions">
+            <a href="../main/write.html" class="edit-btn">수정</a>
+            <span class="delete-btn" data-type="post">삭제</span>
+            </div>
+            <a href="#" class="more">더보기</a>
+          </div>
+
+          <!-- 댓글 영역 -->
+          <br>
+          <div class="comments">
+            <div class="comment-item" data-id="1">
+              <span class="c-text">첫 번째 댓글 내용입니다.</span>
+              <div class="c-votes">
+                <span class="comment-up">👍</span>
+                <span class="comment-down">👎</span>
+              </div>
+            <div class="comment-actions">
+              <span class="edit-btn">수정</span>
+              <span class="delete-btn" data-type="comment">삭제</span>
+            </div>
+            </div>
+            <div class="comment-item" data-id="2">
+              <span class="c-text">두 번째 댓글 내용입니다.</span>
+              <div class="c-votes">
+                <span class="comment-up">👍</span>
+                <span class="comment-down">👎</span>
+              </div>
+            <div class="comment-actions">
+              <span class="edit-btn">수정</span>
+              <span class="delete-btn" data-type="comment">삭제</span>
+            </div>
+            </div>
+            <div class="comment-item" data-id="3">
+              <span class="c-text">세 번째 댓글 내용입니다.</span>
+              <div class="c-votes">
+                <span class="comment-up">👍</span>
+                <span class="comment-down">👎</span>
+              </div>
+            <div class="comment-actions">
+              <span class="edit-btn">수정</span>
+              <span class="delete-btn" data-type="comment">삭제</span>
+            </div>
+            </div>
+          </div>
+            <!-- 댓글 입력창 -->
+            <div class="comment-form" style="display: none;">
+              <textarea placeholder="댓글을 입력하세요..."></textarea>
+              <button type="button" class="submit-comment">작성</button>
+            </div>
+           </div>
+        </div> 
+
+        <!-- 글쓰기 버튼 -->
+        <button id="writeBtn" class="write-btn">✏</button>
+
+      </div> <!-- 게시글 래퍼 끝 -->
+
+      <!-- 신고모달 -->
+        <div id="reportModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>신고하기</h2>
+            <p>신고 사유를 선택해주세요:</p>
+            <form id="reportForm">
+              <label><input type="radio" name="reason" value="욕설/비방"> 욕설/비방</label><br>
+              <label><input type="radio" name="reason" value="스팸/광고"> 스팸/광고</label><br>
+              <label><input type="radio" name="reason" value="음란물"> 음란물</label><br>
+              <label><input type="radio" name="reason" value="도배"> 도배</label><br><br>
+              <button type="submit">신고하기</button>
+              <button type="button" id="cancelBtn">취소</button>
+            </form>
+          </div>
+        </div>
+        
+      <!---- 사이드바 ---->
+        <div class="sidebar">
+        <div class="ad-top">
+          <a href="https://www.eduwill.net/sites/home" target="_blank">
+            <img src="../img/adbaner.jpg" alt="광고 이미지">
+          </a>
+        </div>
+
+        <!-- 탭 버튼 (실시간채팅 / 마이페이지) -->
+        <div class="sidebar-tabs" role="tablist">
+            <button class="tab-button active" data-target="panel-chat" role="tab" aria-selected="true">실시간채팅</button>
+            <button class="tab-button" data-target="panel-mypage" role="tab" aria-selected="false">마이페이지</button>
+        </div>
+
+        <!-- 탭 패널: 실시간채팅 -->
+        <div class="tab-panel" id="panel-chat" role="tabpanel">
+            <div style="text-align: center;">현재 접속자 수</div>
+            <div style="text-align: center;">100,543명</div>
+            <!-- 채팅로그 -->
+            <div class="messages">
+            안녕하세요... (닉네임) 🔔
+            <div style="margin-top:6px;color:#666;font-size:12px;">(예시 채팅이 표시됩니다.)</div>
+            </div>
+            <!-- 입력창 (하단 고정) -->
+            <div class="chat-input">
+            <input type="text" placeholder="내용을 입력하세요">
+            <button>전송</button>
+            </div>
+        </div>
+
+        <!-- 탭 패널: 마이페이지 -->
+        <div class="tab-panel hidden" id="panel-mypage" role="tabpanel" aria-hidden="true">
+          <!-- 목록은 스크롤 가능하도록 flex:1 -->
+          <ul class="mypage-list" style="flex:1; overflow:auto;">
+            <li><a href="mypage.html?panel=posts">내 글 관리</a></li>
+            <li><a href="mypage.html?panel=edit">정보수정</a></li>
+            <li><a href="mypage.html?panel=follow">팔로우 / 팔로워 관리</a></li>
+            <li><a href="mypage.html?panel=messages">메세지</a></li>
+            <li><a href="mypage.html?panel=points">포인트</a></li>
+            <li><a href="mypage.html?panel=alerts">알림</a></li>
+            <li><a href="mypage.html?panel=withdraw">회원탈퇴</a></li>
+          </ul>
+        </div>
+        </div>
+    </div>
+  </main>
+
+
+  <!---------------------- 푸터 -------------------------->
+  <footer>
+    <span>&copy; 2025 AEZEN. All Rights Reserved.</span>
+    <a href="../main/info.html?tab=terms">이용약관</a>
+    <a href="../main/info.html?tab=privacy">개인정보 처리방침</a>
+    <a href="../main/write.html?category=qna&target=admin">문의/신고</a>
+  </footer>
+</body>
+</html>
